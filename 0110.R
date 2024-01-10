@@ -6,3 +6,11 @@ data_pipeline = function (file.path) {
 
 data1_clean <- data_pipeline("data2_1.csv")
 head(data1_clean)
+
+data2_clean <- data_pipeline("data2_2.csv")
+head(data2_clean)
+
+data1_clean <- data_pipeline("data2_1.csv")
+data2_clean <- data_pipeline("data2_2.csv")
+merge.dat = merge(data1_clean, data2_clean, by = "school", all = TRUE)
+head(merge.dat)
