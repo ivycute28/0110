@@ -14,3 +14,10 @@ data1_clean <- data_pipeline("data2_1.csv")
 data2_clean <- data_pipeline("data2_2.csv")
 merge.dat = merge(data1_clean, data2_clean, by = "school", all = TRUE)
 head(merge.dat)
+
+data1_clean <- data_pipeline("data2_1.csv")
+data2_clean <- data_pipeline("data2_2.csv")
+data1.simple = data1_clean[,c("s_d0", "school")]
+data2.simple = data2_clean[,c("s_d0", "school")]
+simple.merge.dat = merge(data1.simple, data2.simple, by = "school", all = TRUE)
+head(simple.merge.dat)
